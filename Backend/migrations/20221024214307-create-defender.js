@@ -13,19 +13,19 @@ module.exports = {
         type: Sequelize.STRING,
       },
       T: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.INTEGER,
       },
       wounds: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.INTEGER,
       },
       save: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.INTEGER,
       },
       invSave: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.INTEGER,
       },
       FNP: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,

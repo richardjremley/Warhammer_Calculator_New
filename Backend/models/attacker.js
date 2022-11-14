@@ -14,11 +14,11 @@ module.exports = (sequelize, DataTypes) => {
   Attacker.init(
     {
       name: DataTypes.STRING,
-      shotsNumber: DataTypes.NUMBER,
-      BS: DataTypes.NUMBER,
-      S: DataTypes.NUMBER,
-      AP: DataTypes.NUMBER,
-      damage: DataTypes.NUMBER,
+      shotsNumber: DataTypes.INTEGER,
+      BS: DataTypes.INTEGER,
+      S: DataTypes.INTEGER,
+      AP: DataTypes.INTEGER,
+      damage: DataTypes.INTEGER,
     },
     {
       sequelize,

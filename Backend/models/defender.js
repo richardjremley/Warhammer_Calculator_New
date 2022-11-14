@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Defender extends Model {
     /**
@@ -13,16 +11,20 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Defender.init({
-    name: DataTypes.STRING,
-    T: DataTypes.NUMBER,
-    wounds: DataTypes.NUMBER,
-    save: DataTypes.NUMBER,
-    invSave: DataTypes.NUMBER,
-    FNP: DataTypes.NUMBER
-  }, {
-    sequelize,
-    modelName: 'Defender',
-  });
+  Defender.init(
+    {
+      name: DataTypes.STRING,
+      T: DataTypes.INTEGER,
+      wounds: DataTypes.INTEGER,
+      save: DataTypes.INTEGER,
+      invSave: DataTypes.INTEGER,
+      FNP: DataTypes.INTEGER,
+    },
+    {
+      sequelize,
+      modelName: "Defender",
+      modelName: "defender",
+    }
+  );
   return Defender;
 };

@@ -13,19 +13,19 @@ module.exports = {
         type: Sequelize.STRING,
       },
       shotsNumber: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.INTEGER,
       },
       BS: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.INTEGER,
       },
       S: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.INTEGER,
       },
       AP: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.INTEGER,
       },
       damage: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,
