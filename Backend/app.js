@@ -1,7 +1,10 @@
 const express = require("express");
 const cors = require("cors");
+// const Sequelize = require("sequelize");
 
 const app = express();
+
+// const sequelize = new Sequelize("sqlite:chinook.db");
 
 const AppRouter = require("./routes/AppRouter");
 

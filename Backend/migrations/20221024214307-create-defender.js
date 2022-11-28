@@ -22,17 +22,19 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       invSave: {
+        allowNull: true,
         type: Sequelize.INTEGER,
       },
       FNP: {
+        allowNull: true,
         type: Sequelize.INTEGER,
       },
       createdAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE,
       },
       updatedAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE,
       },
     });
