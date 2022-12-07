@@ -108,7 +108,8 @@ const GetSolution = async (req, res) => {
       invSave,
       woundDamage,
       B.FNP,
-      fnp
+      fnp,
+      toHitRoll
     );
   } catch (error) {
     console.log(error);
