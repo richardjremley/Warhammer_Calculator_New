@@ -10,12 +10,12 @@ import { BASE_URL } from "../global";
 function AttackCard() {
     const [ ,setAttacks] = useState([]);
     const intialState = {
-      Name: ``,
-      Shots_Number: ``,
-      BS: ``,
-      S: ``,
-      AP: ``,
-      Damage: ``,
+      name: ``,
+      shotsNumber: null,
+      BS: null,
+      S: null,
+      AP: null,
+      damage: null,
     };
   
     const [formState, setFormState] = useState(intialState);
@@ -23,9 +23,9 @@ function AttackCard() {
     useEffect(() => {
       const getAttacks = async () => {
         try {
-          let res = await axios.get(`${BASE_URL}/api/object`);
+          let res = await axios.get(`${BASE_URL}/api/attack`);
           // console.log(res.data.getAttacks);
-          setAttacks(res.data.getAttacks);
+          setAttacks(res.data.GetAttacker);
         } catch (err) {
           console.log(err);
         }
@@ -42,7 +42,7 @@ function AttackCard() {
     const handleSubmit = async (event) => {
 
       event.preventDefault();
-      let res = await axios.post(`${BASE_URL}/api/object`, formState)
+      let res = await axios.put(`${BASE_URL}/api/attack/1`, formState)
       console.log(res.data)
 
       console.log(formState);
@@ -55,21 +55,21 @@ function AttackCard() {
     return (
       <p>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="Name"> Name: </label>
+          <label htmlFor="name"> Name: </label>
           <input
             placeholder="Bolter"
             type="text"
-            id="Name"
+            id="name"
             onChange={handleChange}
             value={formState.Name}
           />
-          <label htmlFor="Shots_Number"> Number of Shots: </label>
+          <label htmlFor="shotsNumber"> Number of Shots: </label>
           <input
             type="number"
             placeholder="2"
-            id="Shots_Number"
+            id="shotsNumber"
             onChange={handleChange}
-            value={formState.Shots_Number}
+            value={formState.shotsNumbers}
           />
           <label htmlFor="BS"> Ballistic Skill: </label>
           <input
@@ -95,13 +95,13 @@ function AttackCard() {
             onChange={handleChange}
             value={formState.AP}
           />
-          <label htmlFor="Damage"> Damage: </label>
+          <label htmlFor="damage"> Damage: </label>
           <input
             type="number"
             placeholder="1"
-            id="Damage"
+            id="damage"
             onChange={handleChange}
-            value={formState.Damage}
+            value={formState.damage}
           />
           <button type="submit">Send</button>
         </form>

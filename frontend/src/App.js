@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     const getSolutions = async () => {
       try {
-        let res = await axios.get(`${BASE_URL}/api/solution`);
+        let res = await axios.get(`${BASE_URL}/api/defend/solution`);
         console.log(res.data);
         setSolutions(res.data);
       } catch (err) {

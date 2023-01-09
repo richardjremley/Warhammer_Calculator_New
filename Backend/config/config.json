@@ -2,21 +2,21 @@
   "development": {
     "username": "pius",
     "password": null,
-    "database": "WH_database",
+    "database": "whdatabase",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "pius",
     "password": null,
-    "database": "WH_test",
+    "database": "whtest",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
     "username": "pius",
     "password": null,
-    "database": "WH_production",
+    "database": "whproduction",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }

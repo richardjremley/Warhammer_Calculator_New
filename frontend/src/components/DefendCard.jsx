@@ -23,7 +23,7 @@ function DefendCard() {
     useEffect(() => {
         const getDefend = async () => {
           try {
-            let res = await axios.get(`${BASE_URL}/api/defense`, formState);
+            let res = await axios.get(`${BASE_URL}/api/defend`, formState);
             setDefend(res.data.getDefend);
           } catch (err) {
             console.log(err);
@@ -37,7 +37,7 @@ function DefendCard() {
       const handleSubmit = async (event) => {
 
         event.preventDefault();
-        await axios.post(`${BASE_URL}/api/defense`, formState)
+        await axios.post(`${BASE_URL}/api/defend`, formState)
 
         console.log(formState);
 

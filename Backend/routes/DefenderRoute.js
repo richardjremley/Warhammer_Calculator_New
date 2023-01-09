@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const controller = require("../controllers/DefendController");
-router.get("/t", controller.GetDefender);
+router.get("/", controller.GetDefender);
 router.get("/shots", controller.getHits);
 router.get("/t2", controller.GetDefender2);
 router.get("/t3", controller.GetAttacker2);
