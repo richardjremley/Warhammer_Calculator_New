@@ -33,6 +33,11 @@ function App() {
         <DefendCard />
 
         <div key="Solution">
+          <h2>Total Hits</h2>
+          <h2>Total Wounds</h2>
+          <h2>Unsaved Wounds</h2>
+          <h2>Total Damage</h2>
+          <h2>Dead Models</h2>
           <h2>Average Wounds Dealt:</h2>
           <h3 className="slt">{solutions}</h3>
           <button onClick={refreshPage}>Submit Results</button>
