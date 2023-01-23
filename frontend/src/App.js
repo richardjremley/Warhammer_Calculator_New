@@ -71,6 +71,7 @@ function App() {
   function toSubmit() {
     hasSubmitted(true);
   }
+
   return (
     <div className="App">
       <div className="items-grid">

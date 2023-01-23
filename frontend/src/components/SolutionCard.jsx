@@ -4,7 +4,7 @@ import { BASE_URL } from "../global";
 
 function SolutionCard(){
     const [submit, hasSubmitted] = useState();
-    const [solutions, setSolutions] = useState([]);
+    let [solutions, setSolutions] = useState([]);
     useEffect(() => {
       const getSolutions = async () => {
         try {
@@ -19,7 +19,7 @@ function SolutionCard(){
     }, []);
     console.log(solutions);
   
-    const [hits, setHits] = useState([]);
+    let [hits, setHits] = useState([]);
     useEffect(() => {
       const getHits = async () => {
         try {
@@ -33,7 +33,7 @@ function SolutionCard(){
       getHits();
     }, []);
   
-    const [wounds, setWounds] = useState([]);
+    let [wounds, setWounds] = useState([]);
     useEffect(() => {
       const getWounds = async () => {
         try {
@@ -47,7 +47,7 @@ function SolutionCard(){
       getWounds();
     }, []);
   
-    const [unsaved, setUnsaved] = useState([]);
+    let [unsaved, setUnsaved] = useState([]);
     useEffect(() => {
       const getUnsaved = async () => {
         try {
@@ -69,7 +69,7 @@ function SolutionCard(){
       console.log("submitted!")
     }
 return( 
-    <div key="Solution" id ={submit? console.log('msg') : console.log('null')}>
+    <div key="Solution" id ={submit? console.log('msg') : {hits, wounds, unsaved, solutions} = 0} >
         <h2>Total Hits</h2>
         <h3 className="slt">{hits}</h3>
         <h2>Total Wounds</h2>
