@@ -78,21 +78,11 @@ function App() {
         <h1>Warhammer Damage Calculator:</h1>
         <AttackCard />
         <DefendCard />
-        <SolutionCard />
+        <div className="sltapp">
+          <SolutionCard />
+        </div>
+        <h4>Knowledge is power. Guard it well.</h4>
       </div>
-
-      {/* <div key="Solution">
-        <h2>Total Hits</h2>
-        <h3 className="slt">{hits}</h3>
-        <h2>Total Wounds</h2>
-        <h3>{wounds}</h3>
-        <h2>Unsaved Wounds</h2>
-        <h3>{unsaved}</h3>
-        <h2>Average Wounds Dealt:</h2>
-        <h3 className="slt">{solutions}</h3>
-        <button onClick={toSubmit}>Submit Results</button>
-      </div> */}
-      <h4>Knowledge is power. Guard it well.</h4>
     </div>
   );
 }

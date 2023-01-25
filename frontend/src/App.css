@@ -6,7 +6,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
 
 }
 .items-grid{  display: grid;
@@ -17,7 +17,7 @@
     outline: 5px solid #f7bb44;
     border-radius: 1rem 1rem 1rem;
     background-color: rgba(204, 204, 197, 0.7);
-    height: 1500px;
+    height: 600px;
     width: 90%;
     margin-left: 85px;
     margin-top: -40px;
@@ -42,7 +42,9 @@ img {
   height: 40vmin;
   pointer-events: none;
 }
-
+.sltapp{
+  font-size: 15px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -63,10 +65,11 @@ img {
 .App-link {
   color: #61dafb;
 }
-.slt{display: grid;
-  grid-template-rows: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
+.slt{
+  /* display: grid;
+  grid-template-rows: 1fr 1fr; */
+  /* justify-items: center;
+  align-items: center; */
   }
 @keyframes App-logo-spin {
   from {

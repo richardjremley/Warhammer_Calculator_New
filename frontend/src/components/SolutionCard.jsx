@@ -69,15 +69,15 @@ function SolutionCard(){
       console.log("submitted!")
     }
 return( 
-    <div key="Solution" id ={submit? console.log('msg') : {hits, wounds, unsaved, solutions} = 0} >
-        <h2>Total Hits</h2>
-        <h3 className="slt">{hits}</h3>
-        <h2>Total Wounds</h2>
-        <h3>{wounds}</h3>
-        <h2>Unsaved Wounds</h2>
+    <div id ={submit? console.log('msg') : {hits, wounds, unsaved, solutions} = 0} >
+        <h2>Total Hits:   {hits}</h2>
+        <h3 c></h3>
+        <h2>Total Wounds: {wounds}</h2>
+  
+        <h2>Unsaved Wounds: </h2>
         <h3>{unsaved}</h3>
         <h2>Average Wounds Dealt:</h2>
-        <h3 className="slt">{solutions}</h3>
+        <h3>{solutions}</h3>
         <button onClick={toSubmit}>Submit Results</button>
       </div>)
 }
