@@ -71,9 +71,7 @@ function SolutionCard(){
 return( 
     <div id ={submit? console.log('msg') : {hits, wounds, unsaved, solutions} = 0} >
         <h2>Total Hits:   {hits}</h2>
-        <h3 c></h3>
         <h2>Total Wounds: {wounds}</h2>
-  
         <h2>Unsaved Wounds: </h2>
         <h3>{unsaved}</h3>
         <h2>Average Wounds Dealt:</h2>
