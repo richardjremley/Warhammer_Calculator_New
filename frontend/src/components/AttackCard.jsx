@@ -61,7 +61,7 @@ function AttackCard() {
             type="text"
             id="name"
             onChange={handleChange}
-            value={formState.Name}
+            value={formState.name}
           />
           <label htmlFor="shotsNumber"> Number of Shots: </label>
           <input
@@ -69,7 +69,7 @@ function AttackCard() {
             placeholder="2"
             id="shotsNumber"
             onChange={handleChange}
-            value={formState.shotsNumbers}
+            value={formState.shotsNumber}
           />
           <label htmlFor="BS"> Ballistic Skill: </label>
           <input
