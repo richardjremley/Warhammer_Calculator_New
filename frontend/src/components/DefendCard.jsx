@@ -7,20 +7,17 @@ import { BASE_URL } from "../global";
 function DefendCard() {
     const [ ,setDefend] = useState([]);
     const intialState = {
-      Name: ``,
+      name: ``,
       T: null,
-      Wounds: null,
-      Save: null,
-      Inv_Save: null,
+      wounds: null,
+      save: null,
+      invSave: null,
       FNP: null,
     };
   
     const [formState, setFormState] = useState(intialState);
- const handleChange = (event) => {
-        setFormState({ ...formState, [event.target.id]: event.target.value });
-      };
 
-    useEffect(() => {
+       useEffect(() => {
         const getDefend = async () => {
           try {
             let res = await axios.get(`${BASE_URL}/api/defend`, formState);
@@ -30,14 +27,18 @@ function DefendCard() {
           }
         };
         getDefend();
-      }, );
-    
-     
+      }, ); 
+
+  const handleChange = (event) => {
+        setFormState({ ...formState, [event.target.id]: event.target.value });
+      };
+
     
       const handleSubmit = async (event) => {
 
         event.preventDefault();
-        await axios.put(`${BASE_URL}/api/defend/1`, formState)
+       let res =  await axios.put(`${BASE_URL}/api/defend/1`, formState)
+       console.log(res.data)
 
         console.log(formState);
 
@@ -79,7 +80,7 @@ function DefendCard() {
             type="number"
             id="Inv_Save"
             onChange={handleChange}
-            value={formState.Inv_Save}
+            value={formState.invSave}
           />
           <label htmlFor="FNP"> Feel no Pain: </label>
           <input
