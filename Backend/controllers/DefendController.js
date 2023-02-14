@@ -25,6 +25,16 @@ const GetDefender = async (req, res) => {
     throw error;
   }
 };
+const updateDefender = async (req, res) => {
+  try {
+    const update = await Defender.findByPK(res.params.attacker_id);
+    console.log(update.dataValues, "here");
+    await update.update(req.body);
+    res.send(update);
+  } catch (error) {
+    throw error;
+  }
+};
 
 const GetAttacker2 = async (req, res) => {
   try {
@@ -328,6 +338,7 @@ const GetSolution2 = async (req, res) => {
 module.exports = {
   GetDefender,
   GetDefender2,
+  updateDefender,
   GetSolution2,
   GetAttacker2,
   getHits,

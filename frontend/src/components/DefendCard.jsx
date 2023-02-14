@@ -8,11 +8,11 @@ function DefendCard() {
     const [ ,setDefend] = useState([]);
     const intialState = {
       Name: ``,
-      T: ``,
-      Wounds: ``,
-      Save: ``,
-      Inv_Save: ``,
-      FNP: ``,
+      T: null,
+      Wounds: null,
+      Save: null,
+      Inv_Save: null,
+      FNP: null,
     };
   
     const [formState, setFormState] = useState(intialState);
@@ -37,7 +37,7 @@ function DefendCard() {
       const handleSubmit = async (event) => {
 
         event.preventDefault();
-        await axios.post(`${BASE_URL}/api/defend`, formState)
+        await axios.put(`${BASE_URL}/api/defend/1`, formState)
 
         console.log(formState);
 

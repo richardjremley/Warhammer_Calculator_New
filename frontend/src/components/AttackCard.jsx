@@ -24,14 +24,13 @@ function AttackCard() {
       const getAttacks = async () => {
         try {
           let res = await axios.get(`${BASE_URL}/api/attack`);
-          // console.log(res.data.getAttacks);
           setAttacks(res.data.GetAttacker);
         } catch (err) {
           console.log(err);
         }
       };
       getAttacks();
-    }, []);
+    }, []);  
   
 
     const handleChange = async (event) => {
