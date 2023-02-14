@@ -54,7 +54,7 @@ function DefendCard() {
             placeholder="Space Marine"
             id="Name"
             onChange={handleChange}
-            value={formState.Name}
+            value={formState.name}
           />
           <label htmlFor="T"> Toughness: </label>
           <input
@@ -70,7 +70,7 @@ function DefendCard() {
             id="Wounds"
             placeholder="2"
             onChange={handleChange}
-            value={formState.Wounds}
+            value={formState.wounds}
           />
           <label htmlFor="Save"> Armor Save: </label>
           <input type="number" placeholder="3"
