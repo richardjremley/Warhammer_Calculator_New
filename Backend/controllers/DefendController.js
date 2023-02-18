@@ -17,6 +17,15 @@ const GetDefender2 = async (req, res) => {
   }
 };
 
+const GetDefenderPK = async (req, res) => {
+  try {
+    DefendPK = await Defender.findByPK(res.params.defender_id);
+    res.send(DefendPK);
+  } catch (error) {
+    throw error;
+  }
+};
+
 const GetDefender = async (req, res) => {
   try {
     Defend1 = await Defender.findOne({});
@@ -27,7 +36,7 @@ const GetDefender = async (req, res) => {
 };
 const updateDefender = async (req, res) => {
   try {
-    const update = await Defender.findByPK(res.params.attacker_id);
+    const update = await Defender.findByPK(res.params.defender_id);
     console.log(update.dataValues, "here");
     await update.update(req.body);
     res.send(update);
@@ -338,6 +347,7 @@ const GetSolution2 = async (req, res) => {
 module.exports = {
   GetDefender,
   GetDefender2,
+  GetDefenderPK,
   updateDefender,
   GetSolution2,
   GetAttacker2,

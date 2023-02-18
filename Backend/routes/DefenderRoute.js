@@ -9,5 +9,6 @@ router.get("/solution", controller.GetSolution2);
 router.get("/test", controller.GetTest);
 router.get("/wounds", controller.getWounds);
 router.get("/unsaved", controller.getUnsavedWounds);
+router.get("/:defender_id", controller.GetDefenderPK);
 router.put("/:defender_id", controller.updateDefender);
 module.exports = router;
