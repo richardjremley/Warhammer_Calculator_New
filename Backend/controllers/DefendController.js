@@ -1,7 +1,7 @@
 const { Attacker, Defender } = require("../models");
 const getShotsNumber = async (req, res) => {
   try {
-    Defend = await Defender.findOne({});
+    Defend = await Defender.findOne({ id: 1 });
     res.send(Defend.shotsNumber);
   } catch (error) {
     throw error;
@@ -17,6 +17,14 @@ const GetDefender2 = async (req, res) => {
   }
 };
 
+const GetAttackerById2 = async (req, res) => {
+  try {
+    Attack2 = await Attacker.findByPk(req.params.attacker_id);
+    res.send(Attack2);
+  } catch (error) {
+    throw error;
+  }
+};
 const GetDefenderPK = async (req, res) => {
   try {
     DefendPK = await Defender.findByPK(res.params.defender_id);
@@ -49,15 +57,6 @@ const GetAttacker2 = async (req, res) => {
   try {
     Attack2 = await Attacker.findOne({});
     res.send(Attack2);
-  } catch (error) {
-    throw error;
-  }
-};
-
-const GetTest = async (req, res) => {
-  try {
-    yourMother = "4";
-    res.send(yourMother);
   } catch (error) {
     throw error;
   }
@@ -345,14 +344,15 @@ const GetSolution2 = async (req, res) => {
 };
 
 module.exports = {
+  getShotsNumber,
   GetDefender,
   GetDefender2,
   GetDefenderPK,
   updateDefender,
   GetSolution2,
   GetAttacker2,
+  GetAttackerById2,
   getHits,
-  GetTest,
   getWounds,
   getUnsavedWounds,
 };
